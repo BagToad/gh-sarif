@@ -56,10 +56,6 @@ var viewCmd = &cobra.Command{
 
 		// Add params here
 
-		// if sarifFlag {
-		// 	params.Add("sarif", "true")
-		// }+
-
 		u.RawQuery = params.Encode()
 
 		var opts api.ClientOptions
@@ -89,14 +85,11 @@ var viewCmd = &cobra.Command{
 		}
 		bodyString := string(bodyBytes)
 
+		// Unmarshal JSON if SARIF or JSON flag is set.
+		// Maybe will actually treat SARIF file differently in the future.
 		if jsonFlag || sarifFlag {
 			writer := os.Stdout
 			defer writer.Close()
-
-			if err != nil {
-				fmt.Println(err)
-				return
-			}
 
 			reader := bytes.NewBufferString(bodyString)
 
@@ -105,7 +98,6 @@ var viewCmd = &cobra.Command{
 				fmt.Println(err)
 				return
 			}
-			return
 		}
 	},
 }

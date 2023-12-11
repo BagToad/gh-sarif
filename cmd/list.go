@@ -28,7 +28,6 @@ var refFlag string
 var toolNameFlag string
 var pageFlag int
 var limitFlag int
-// var jsonFlag bool
 
 const defaultLimit = 30
 
