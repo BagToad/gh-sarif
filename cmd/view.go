@@ -112,5 +112,5 @@ var viewCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(viewCmd)
 
-	viewCmd.Flags().BoolVarP(&sarifFlag, "sarif-raw", "S", false, "Print raw SARIF to stdout")
+	viewCmd.Flags().BoolVarP(&sarifFlag, "sarif", "S", false, "Print raw SARIF to stdout")
 }
