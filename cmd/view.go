@@ -64,6 +64,7 @@ var viewCmd = &cobra.Command{
 
 		var opts api.ClientOptions
 		if sarifFlag {
+			fmt.Println("SARIF")
 			opts = api.ClientOptions{
 				Headers: map[string]string{"Accept": "application/sarif+json"},
 			}
@@ -88,7 +89,7 @@ var viewCmd = &cobra.Command{
 		}
 		bodyString := string(bodyBytes)
 
-		if jsonFlag {
+		if jsonFlag || sarifFlag {
 			writer := os.Stdout
 			defer writer.Close()
 
