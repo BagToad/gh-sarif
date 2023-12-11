@@ -22,12 +22,13 @@ import (
 	"github.com/cli/go-gh/v2/pkg/term"
 )
 
-var repo repository.Repository
+// Supported params:
+// https://docs.github.com/en/rest/code-scanning/code-scanning?apiVersion=2022-11-28#list-code-scanning-analyses-for-a-repository
 var refFlag string
 var toolNameFlag string
 var pageFlag int
 var limitFlag int
-var jsonFlag bool
+// var jsonFlag bool
 
 const defaultLimit = 30
 
@@ -83,7 +84,6 @@ var listCmd = &cobra.Command{
 		}
 
 		params := url.Values{}
-		params.Add("page", "1")
 
 		if limitFlag != defaultLimit {
 			params.Add("per_page", fmt.Sprintf("%v", limitFlag))
@@ -167,6 +167,8 @@ var listCmd = &cobra.Command{
 		t := tableprinter.New(terminal.Out(), terminal.IsTerminalOutput(), termWidth)
 
 		if terminal.IsTerminalOutput() {
+			// Unfortunately, the API doesn't return the total number of analyses -
+			// https://docs.github.com/en/rest/code-scanning/code-scanning?apiVersion=2022-11-28#list-code-scanning-analyses-for-a-repository
 			fmt.Printf("Showing %d analyses on page %d/?\n\n", len(bodyJSON), pageFlag)
 		}
 
@@ -209,19 +211,9 @@ var listCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(listCmd)
-	listCmd.Flags().StringVarP(&refFlag, "ref", "r", "", "Git ref (branch, tag, or SHA)")
+	listCmd.Flags().StringVarP(&refFlag, "ref", "r", "", " The ref for a branch can be formatted either as refs/heads/<branch name> or simply <branch name>. To reference a pull request use refs/pull/<number>/merge.")
 	listCmd.Flags().StringVarP(&toolNameFlag, "tool", "t", "", "Tool name")
 	listCmd.Flags().IntVarP(&pageFlag, "page", "p", 1, "Page number of analyses to return")
 	listCmd.Flags().IntVarP(&limitFlag, "limit", "L", defaultLimit, "Number of analyses to return per page (default 30, max 100)")
-	listCmd.Flags().BoolVarP(&jsonFlag, "json", "j", false, "Output JSON instead of text (includes additional fields)")
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// listCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// listCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// listCmd.Flags().BoolVarP(&jsonFlag, "json", "j", false, "Output JSON instead of text (includes additional fields)")
 }
