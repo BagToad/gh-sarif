@@ -1,5 +1,5 @@
 /*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+Copyright © 2023 Kynan Ware
 */
 package cmd
 
@@ -70,7 +70,6 @@ var viewCmd = &cobra.Command{
 		}
 
 		client, err := api.NewRESTClient(opts)
-
 		if err != nil {
 			fmt.Println(err)
 			return
@@ -83,12 +82,11 @@ var viewCmd = &cobra.Command{
 		}
 
 		bodyBytes, err := io.ReadAll(response.Body)
-		bodyString := string(bodyBytes)
-
 		if err != nil {
 			fmt.Println(err)
 			return
 		}
+		bodyString := string(bodyBytes)
 
 		if jsonFlag {
 			writer := os.Stdout

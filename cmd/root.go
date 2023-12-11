@@ -32,27 +32,11 @@ func Execute() {
 
 var repoFlag string
 var jsonFlag bool
-
 var repo repository.Repository
 
 func init() {
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here,
-	// will be global for your application.
-
 	// ROOT FLAGS
 	rootCmd.PersistentFlags().StringVarP(&repoFlag, "repo", "R", "", "GitHub repository (format: owner/repo)")
 	rootCmd.PersistentFlags().BoolVarP(&jsonFlag, "json", "j", false, "Output JSON instead of text (includes additional fields)")
-
-	// if repoFlag == "" {
-	// 	repo, err := repository.Current()
-	// 	if err != nil {
-	// 		fmt.Println(err)
-	// 		return
-	// 	}
-	// }
-	// Cobra also supports local flags, which will only run
-	// when this action is called directly.
-	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 }
