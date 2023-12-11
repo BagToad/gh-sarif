@@ -4,7 +4,7 @@
 
 This is a work in progress (and mostly just for fun)! Anything may change or be removed at any time. 
 
-## Features
+## Feature Completion
 
 - [COMPLETE] [`list` Code Scanning analyses](https://docs.github.com/en/rest/code-scanning/code-scanning?apiVersion=2022-11-28#list-code-scanning-analyses-for-a-repository)
 - [WIP] [`view` Code Scanning analyses](https://docs.github.com/en/rest/code-scanning/code-scanning?apiVersion=2022-11-28#get-a-code-scanning-analysis-for-a-repository)
