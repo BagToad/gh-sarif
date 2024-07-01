@@ -4,7 +4,7 @@ go 1.21.3
 
 require (
 	github.com/cli/go-gh/v2 v2.8.0
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 )
 
 require (
