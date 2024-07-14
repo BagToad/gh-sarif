@@ -12,6 +12,26 @@ gh extension install bagtoad/gh-sarif
 
 ## Usage
 
+```
+Usage:
+  gh sarif [command]
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  delete      Delete a code scanning analysis
+  help        Help about any command
+  list        List analyses for a repository
+  upload      Upload a SARIF file to a repo
+  view        View analysis results
+
+Flags:
+  -h, --help          help for gh-sarif
+  -j, --json          Output JSON instead of text (includes additional fields)
+  -R, --repo string   GitHub repository (format: owner/repo)
+
+Use "gh sarif [command] --help" for more information about a command.
+```
+
 ### List Analyses for a Repository
 
 ```sh
