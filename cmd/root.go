@@ -29,9 +29,8 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "gh-sarif",
-	Short: "Work with Code Scanning analyses in GitHub",
-	Long:  `Work with Code Scanning analyses in GitHub`,
+	Use:   "gh sarif",
+	Short: "Interact with GitHub Code Scanning analyses",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },

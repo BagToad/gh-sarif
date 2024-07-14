@@ -42,7 +42,7 @@ import (
 // viewCmd represents the view command
 var viewCmd = &cobra.Command{
 	Use:   "view [<analysis-id> | <sarif-file>] [--sarif | --csv | --json]",
-	Short: "View an analysis",
+	Short: "View GitHub Code Scanning analysis or SARIF results",
 	Long: `View results given the GitHub analysis ID or SARIF file.
 	
 	Use --sarif to get a subset of the analysis SARIF from GitHub.`,

@@ -52,7 +52,7 @@ type uploadedOK struct {
 // uploadCmd represents the upload command
 var uploadCmd = &cobra.Command{
 	Use:   "upload [flags] <commit_sha> <ref> <sarif_file>",
-	Short: "Upload a SARIF file to a repo",
+	Short: "Upload a SARIF file to GitHub Code Scanning",
 	Long:  ``,
 	Args:  cobra.MinimumNArgs(3),
 	Run: func(cmd *cobra.Command, args []string) {

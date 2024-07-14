@@ -18,11 +18,11 @@ Usage:
 
 Available Commands:
   completion  Generate the autocompletion script for the specified shell
-  delete      Delete a code scanning analysis
+  delete      Delete a GitHub Code Scanning Analysis
   help        Help about any command
-  list        List analyses for a repository
-  upload      Upload a SARIF file to a repo
-  view        View analysis results
+  list        List GitHub Code Scanning analyses for a repository
+  upload      Upload a SARIF file to GitHub Code Scanning
+  view        View GitHub Code Scanning analysis or SARIF results
 
 Flags:
   -h, --help          help for gh-sarif

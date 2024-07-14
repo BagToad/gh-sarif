@@ -134,7 +134,7 @@ func getDeleteResponse(r *http.Response) (deletedOK, error) {
 // deleteCmd represents the delete command
 var deleteCmd = &cobra.Command{
 	Use:   "delete [flags] <analysis-id>...",
-	Short: "Delete a code scanning analysis",
+	Short: "Delete a GitHub Code Scanning Analysis",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		// Setup Repository

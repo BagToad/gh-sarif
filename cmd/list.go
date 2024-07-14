@@ -73,7 +73,7 @@ type Analysis struct {
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list [flags]",
-	Short: "List analyses for a repository",
+	Short: "List GitHub Code Scanning analyses for a repository",
 	Long:  fmt.Sprintf(`List analyses for a repository. By default, the most recent %v analyses are listed.`, defaultLimit),
 	Run: func(cmd *cobra.Command, args []string) {
 		// Setup Repository
