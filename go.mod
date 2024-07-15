@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/cli/go-gh/v2 v2.9.0
-	github.com/owenrumney/go-sarif/v2 v2.3.2
+	github.com/owenrumney/go-sarif/v2 v2.3.3
 	github.com/spf13/cobra v1.8.1
 )
 
