@@ -3,7 +3,7 @@ module github.com/BagToad/gh-sarif
 go 1.21
 
 require (
-	github.com/cli/go-gh/v2 v2.11.1
+	github.com/cli/go-gh/v2 v2.11.2
 	github.com/owenrumney/go-sarif/v2 v2.3.3
 	github.com/spf13/cobra v1.8.1
 )
@@ -34,9 +34,9 @@ require (
 	github.com/thlib/go-timezone-local v0.0.3 // indirect
 	github.com/yuin/goldmark v1.7.4 // indirect
 	github.com/yuin/goldmark-emoji v1.0.3 // indirect
-	golang.org/x/net v0.27.0 // indirect
-	golang.org/x/sys v0.22.0 // indirect
-	golang.org/x/term v0.22.0 // indirect
-	golang.org/x/text v0.16.0 // indirect
+	golang.org/x/net v0.33.0 // indirect
+	golang.org/x/sys v0.28.0 // indirect
+	golang.org/x/term v0.27.0 // indirect
+	golang.org/x/text v0.21.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
