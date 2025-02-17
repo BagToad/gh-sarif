@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/cli/go-gh/v2 v2.11.2
 	github.com/owenrumney/go-sarif/v2 v2.3.3
-	github.com/spf13/cobra v1.8.1
+	github.com/spf13/cobra v1.9.1
 )
 
 require (
@@ -30,7 +30,7 @@ require (
 	github.com/muesli/termenv v0.15.2 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
-	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/spf13/pflag v1.0.6 // indirect
 	github.com/thlib/go-timezone-local v0.0.3 // indirect
 	github.com/yuin/goldmark v1.7.4 // indirect
 	github.com/yuin/goldmark-emoji v1.0.3 // indirect
